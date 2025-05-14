@@ -1,0 +1,27 @@
+* {
+  border: 1px solid #32cd32;
+}
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Cubao";
+  font-display: swap;
+  src: url("/src/assets/fonts/Cubao.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Rotis";
+  font-display: swap;
+  src: url("/src/assets/fonts/Rotis.ttf") format("truetype");
+}
+
+@theme {
+  --color-ceramic-50: #f6f6ed;
+  --color-cobalt-100: #004aad;
+  --color-mainGray: #393939;
+  --font-accent: Cubao;
+  --font-description: Rotis;
+  --text-giant: 11rem;
+  --tracking-custom: 0.08rem;
+}
