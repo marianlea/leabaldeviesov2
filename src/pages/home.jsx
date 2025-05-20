@@ -15,7 +15,7 @@ function Home() {
         completing a 3-month coding bootcamp, I’m now transitioning fully into
         tech and excited to grow as a developer.
       </section>
-      <section className="mt-9">
+      <section className="mt-12 font-main text-xl italic text-outlineGray">
         <p>view projects</p>
         <p>see my resume</p>
         <p>send a message</p>

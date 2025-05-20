@@ -1,13 +1,15 @@
 import SideBarLinks from "./SideBarLinks";
 
-function SideBar({ sideBarLinks }) {
+function SideBar({ sideBarLinks, colours, customMargin }) {
   return (
-    <sidebar className="sidebar">
+    <aside className="sidebar">
       <SideBarLinks
         sideBarLinks={sideBarLinks}
+        colours={colours}
+        customMargin={customMargin}
         className="sideBarLinks"
       ></SideBarLinks>
-    </sidebar>
+    </aside>
   );
 }
 

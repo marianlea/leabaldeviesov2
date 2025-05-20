@@ -13,13 +13,21 @@ const sideBarLinks = [
   { path: "/contact", text: "contact", element: <Contact /> },
 ];
 
+const colours = [
+  "bg-ceramic-50",
+  "bg-cobalt-50",
+  "bg-cobalt-100",
+  "bg-eggyolk-100",
+];
+
+const customMargin = ["ml-[0rem]", "ml-[0.2rem]", "ml-[0.4rem]", "ml-[0.6rem]"];
+
 function App() {
   return (
     <BrowserRouter>
       <div className="layout-setter-container min-h-screen bg-ceramic-50 grid grid-cols-[85%_15%]">
-        <section className="py-20 px-6">
+        <main className="py-20 px-6">
           <Routes>
-            {/* <SideBar sideBarLinks={sideBarLinks} /> */}
             {sideBarLinks.map((sideBarLink, idx) => (
               <Route
                 key={idx}
@@ -28,10 +36,13 @@ function App() {
               ></Route>
             ))}
           </Routes>
-        </section>
-        <section>
-          <SideBar sideBarLinks={sideBarLinks} className="flex flex-col" />
-        </section>
+        </main>
+        <SideBar
+          sideBarLinks={sideBarLinks}
+          colours={colours}
+          customMargin={customMargin}
+          className="h-full overflow-hidden"
+        />
       </div>
     </BrowserRouter>
   );

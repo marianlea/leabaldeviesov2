@@ -16,12 +16,23 @@
   src: url("/src/assets/fonts/Rotis.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "JustSans";
+  font-display: swap;
+  src: url("/src/assets/fonts/JustSans.otf");
+  format: ("opentype");
+}
+
 @theme {
   --color-ceramic-50: #f6f6ed;
   --color-cobalt-100: #004aad;
+  --color-cobalt-50: #006ed4;
+  --color-eggyolk-100: #ffc736;
   --color-mainGray: #393939;
+  --color-outlineGray: #828282;
   --font-accent: Cubao;
   --font-description: Rotis;
+  --font-main: JustSans;
   --text-giant: 11rem;
   --tracking-custom: 0.08rem;
 }
