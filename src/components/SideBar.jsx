@@ -1,6 +1,5 @@
 import SideBarLinks from "./SideBarLinks";
-
-function SideBar({ sideBarLinks, colours, customMargin }) {
+export default function SideBar({ sideBarLinks, colours, customMargin }) {
   return (
     <aside className="sidebar">
       <SideBarLinks
@@ -12,5 +11,3 @@ function SideBar({ sideBarLinks, colours, customMargin }) {
     </aside>
   );
 }
-
-export default SideBar;

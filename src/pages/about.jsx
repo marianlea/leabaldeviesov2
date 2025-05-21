@@ -1,7 +1,7 @@
 // import webPortrait from "../assets/images/web_portrait.jpg";
 import mobilePortrait from "../assets/images/mobile_portrait.jpg";
 
-function About() {
+export default function About() {
   return (
     <div className="about">
       <p className="text-xs text-justify font-description text-mainGray mb-8 leading-relaxed tracking-wider">
@@ -14,11 +14,11 @@ function About() {
         into a passion for software engineering.
       </p>
       <div className="w-full flex justify-center items-center mb-3">
-        <hr className="w-10/12 bg-mainGray"></hr>
+        <hr className="w-10/12 text-hrLine"></hr>
       </div>
       <img src={mobilePortrait} className=""></img>
       <div className="w-full flex justify-center items-center mt-3">
-        <hr className="w-10/12 bg-mainGray"></hr>
+        <hr className="w-10/12 text-hrLine"></hr>
       </div>
       <p className="text-xs text-justify font-description mt-8 text-mainGray leading-relaxed tracking-wider">
         Before transitioning into tech, I worked as a pastry chef and early
@@ -35,5 +35,3 @@ function About() {
     </div>
   );
 }
-
-export default About;

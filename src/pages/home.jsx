@@ -1,6 +1,6 @@
 import React from "react";
 
-function Home() {
+export default function Home() {
   return (
     <div className="home">
       <section className="font-description text-5xl text-mainGray">
@@ -24,5 +24,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

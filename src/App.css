@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid #32cd32;
-}
+} */
 
 @import "tailwindcss";
 
@@ -30,6 +30,7 @@
   --color-eggyolk-100: #ffc736;
   --color-mainGray: #393939;
   --color-outlineGray: #828282;
+  --color-hrLine: #d9d9d9;
   --font-accent: Cubao;
   --font-description: Rotis;
   --font-main: JustSans;
