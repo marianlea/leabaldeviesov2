@@ -20,7 +20,6 @@ export default function Home() {
         <p>see my resume</p>
         <p>send a message</p>
       </section>
-      <section>sorftware engineer</section>
     </div>
   );
 }
