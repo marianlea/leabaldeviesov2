@@ -21,16 +21,27 @@ const linkMargins = ["mt-0", "mt-20", "mt-40", "mt-60"];
 //   );
 // }
 
+// export default function SideBarLinks({ sideBarLinks, colours, customMargin }) {
+//   return (
+//     <section className="h-full">
+//       <div className="bg-ceramic-50">
+//         <div className="bg-cobalt-100">
+//           <div className="bg-cobalt-50">
+//             <div className="bg-eggyolk-100"></div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
 export default function SideBarLinks({ sideBarLinks, colours, customMargin }) {
   return (
     <section className="h-full">
-      <div className="bg-ceramic-50">
-        <div className="bg-cobalt-100">
-          <div className="bg-cobalt-50">
-            <div className="bg-eggyolk-100"></div>
-          </div>
-        </div>
-      </div>
+      <div className="bg-ceramic-50"></div>
+      <div className="bg-cobalt-100"></div>
+      <div className="bg-cobalt-50"></div>
+      <div className="bg-eggyolk-100"></div>
     </section>
   );
 }

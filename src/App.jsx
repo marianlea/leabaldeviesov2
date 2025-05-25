@@ -44,26 +44,24 @@ function App() {
           customMargin={customMargin}
           className="h-full overflow-hidden"
         /> */}
-        {/* <aside className="fixed h-full w-[15vw] top-0 right-0 place-items-end">
-          <div className="bg-ceramic-50 h-full w-full rounded-tl-lg border-1 border-ceramic-50 content-end place-items-end">
-            <div className="-rotate-90 mb-5">home</div>
-            <div className="bg-cobalt-50 h-9/12 w-11/12 rounded-tl-lg border-1 border-cobalt-50 content-end place-items-end">
-              <div className="-rotate-90 mb-5">about</div>
-              <div className="bg-cobalt-100 h-9/12 w-11/12 rounded-tl-lg border-1 border-cobalt-100 content-end place-items-end">
-                <div className="-rotate-90 p">projects</div>
-                <div className="bg-eggyolk-100 h-1/2 w-11/12 rounded-tl-lg border-1 border-eggyolk-100 content-end place-items-end">
-                  <div className="-rotate-90">contact</div>
-                </div>
-              </div>
+        <aside className="h-full w-full flex flex-col">
+          <div className="home-button bg-ceramic-50 flex-1 flex justify-center items-center">
+            <div className="-rotate-90">home</div>
+          </div>
+          <div className="about-button bg-cobalt-100 flex-1 flex justify-center items-center rounded-tl-2xl">
+            <div className="-rotate-90">about</div>
+          </div>
+          <div className="projects-button bg-cobalt-100  h-full w-full flex-1 flex flex-row">
+            <div className="h-full w-1/12 bg-cobalt-100 flex justify-center items-center"></div>
+            <div className="bg-cobalt-50 w-11/12 flex items-center justify-center rounded-tl-2xl">
+              <div className="-rotate-90">projects</div>
             </div>
           </div>
-        </aside> */}
-        <aside className="fixed h-full w-[15vw] top-0 right-0 place-items-end">
-          <div className="bg-ceramic-50 h-full w-[15vw] rounded-tl-lg border-1 border-ceramic-50 bottom-0 right-0 fixed content-start">
-            <div className="bg-cobalt-50 h-9/12 w-[14vw] rounded-tl-lg border-1 border-cobalt-50 bottom-0 right-0 fixed place-content-start">
-              <div className="bg-cobalt-100 h-6/12 w-[13vw] rounded-tl-lg border-1 border-cobalt-100 bottom-0 right-0 fixed content-start">
-                <div className="bg-eggyolk-100 h-3/12 w-[12vw] rounded-tl-lg border-1 border-eggyolk-100 bottom-0 right-0 fixed content-center"></div>
-              </div>
+          <div className="about-button bg-cobalt-50 h-full w-full flex-1 flex flex-row">
+            <div className="h-full w-1/12 bg-cobalt-100"></div>
+            <div className="h-full w-1/12 bg-cobalt-50"></div>
+            <div className="bg-eggyolk-100 w-10/12 flex items-center justify-center rounded-tl-2xl">
+              <div className="-rotate-90">about</div>
             </div>
           </div>
         </aside>

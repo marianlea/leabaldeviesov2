@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -16,9 +16,20 @@ export default function Home() {
         tech and excited to grow as a developer.
       </section>
       <section className="mt-12 font-main text-xl italic text-outlineGray">
-        <p>view projects</p>
-        <p>see my resume</p>
-        <p>send a message</p>
+        <p>
+          <Link to="/projects">view projects</Link>
+        </p>
+        <p>
+          <a
+            href="/Lea_Baldevieso.pdf"
+            target="_blank"
+            rel="nooopener noreferrer"
+          ></a>
+          see my resume
+        </p>
+        <p>
+          <Link to="/contact">send a message</Link>
+        </p>
       </section>
     </div>
   );

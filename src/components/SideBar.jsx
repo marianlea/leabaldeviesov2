@@ -10,13 +10,18 @@ export default function SideBar({ sideBarLinks, colours, customMargin }) {
       ></SideBarLinks>
        */}
 
-      <div className="bg-ceramic-50">
+      {/* <div className="bg-ceramic-50">
         <div className="bg-cobalt-100">
           <div className="bg-cobalt-50">
             <div className="bg-eggyolk-100"></div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <div className="bg-ceramic-50"></div>
+      <div className="bg-cobalt-100"></div>
+      <div className="bg-cobalt-50"></div>
+      <div className="bg-eggyolk-100"></div>
     </aside>
   );
 }
