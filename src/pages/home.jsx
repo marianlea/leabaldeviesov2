@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -17,18 +17,24 @@ export default function Home() {
       </section>
       <section className="mt-12 font-main text-xl italic text-outlineGray">
         <p>
-          <Link to="/projects">view projects</Link>
+          <NavLink
+            to="/projects"
+            //  onClick={() => onClickTab("projects-tab")}
+          >
+            view projects
+          </NavLink>
         </p>
         <p>
           <a
             href="/Lea_Baldevieso.pdf"
             target="_blank"
-            rel="nooopener noreferrer"
-          ></a>
-          see my resume
+            rel="noopener noreferrer"
+          >
+            see my resume
+          </a>
         </p>
         <p>
-          <Link to="/contact">send a message</Link>
+          <NavLink to="/contact">send a message</NavLink>
         </p>
       </section>
     </div>

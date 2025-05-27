@@ -30,10 +30,20 @@ const sideBarLinks = [
 ];
 
 function App() {
+  // const [activeTab, setActiveTab] = useState("home-tab");
+
+  // const handleClickTab = (tabName) => {
+  //   setActiveTab(tabName);
+  // };
+
   return (
     <BrowserRouter>
       <div className="layout-setter-container min-h-screen bg-ceramic-50 grid grid-cols-[85%_15%]">
-        <main className="py-20 pl-5 pr-7">
+        <main
+          className="py-20 pl-5 pr-7"
+          // activeTab={activeTab}
+          // onClickTab={handleClickTab}
+        >
           <section className="font-main text-gray-300 text-5xl"></section>
           <Routes>
             {sideBarLinks.map((sideBarLink, idx) => (
@@ -45,7 +55,12 @@ function App() {
             ))}
           </Routes>
         </main>
-        <SideBar className="h-full" />
+        <SideBar
+          className="h-full"
+          tabs={sideBarLinks}
+          // activeTab={activeTab}
+          // onClickTab={handleClickTab}
+        />
       </div>
     </BrowserRouter>
   );
