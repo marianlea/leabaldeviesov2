@@ -31,9 +31,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact font-description text-mainGray text-justify w-full h-full">
+    <div className="contact font-description text-mainGray text-justify h-full flex flex-col items-center justify-center w-10/12 md:w-full ml-4 md:ml-6">
       {showMessageSuccess ? (
-        <section className="thank-you-message w-10/12 flex flex-col items-center">
+        <section className="thank-you-message w-10/12 flex flex-col items-center justify-center">
           <p className="text-xl mt-20 inline-block">
             Your message is succesfully sent
             <span className="inline-flex ml-2 text-cobalt-50">
@@ -48,8 +48,12 @@ export default function Contact() {
           {/* <Paperplane className="ml-2 mt-1 text-cobalt-50 text-2xl" /> */}
         </section>
       ) : (
-        <form ref={form} onSubmit={sendEmail} className="contact-form">
-          <h1>
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="contact-form w-full md:w-11/12 flex flex-col justify-center"
+        >
+          <h1 className="text-basemd:text-xl">
             Send me a message
             <span className="text-eggyolk-100">{` :  )`}</span>
           </h1>
@@ -62,14 +66,14 @@ export default function Contact() {
           )}
           <input
             name="name"
-            className="name-field border-1 border-outlineGray rounded-2xl pl-3 text-sm w-full mt-3 mb-2 p-1"
+            className="name-field border-1 border-outlineGray rounded-2xl pl-3 text-sm md:text-base w-full mt-3 mb-2 p-1"
             placeholder="first name"
             type="text"
             required
           ></input>
           <input
             name="email"
-            className="email-field border-1 border-outlineGray rounded-2xl pl-3 text-sm w-full mb-2 p-1"
+            className="email-field border-1 border-outlineGray rounded-2xl pl-3 text-sm md:text-base w-full mb-2 p-1"
             placeholder="email"
             type="email"
             required
@@ -77,19 +81,19 @@ export default function Contact() {
           <input
             name="subject"
             type="text"
-            className="subject-field border-1 border-outlineGray rounded-2xl pl-3 text-sm w-full mb-2 p-1"
+            className="subject-field border-1 border-outlineGray rounded-2xl pl-3 text-sm md:text-base w-full mb-2 p-1"
             placeholder="subject"
             required
           ></input>
           <textarea
             name="message"
-            className="message-field border-1 border-outlineGray rounded-2xl pl-3 text-sm w-full mb-2 p-1"
+            className="message-field border-1 border-outlineGray rounded-2xl pl-3 text-sm md:text-base w-full mb-2 p-1"
             placeholder="message"
             rows={8}
             required
           ></textarea>
           <button
-            className="submit-button bg-cobalt-50 text-ceramic-50 rounded-2xl text-sm w-full mb-2 p-1"
+            className="submit-button bg-cobalt-50 text-ceramic-50 rounded-2xl text-sm md:text-base w-full mb-2 p-1"
             type="submit"
           >
             send

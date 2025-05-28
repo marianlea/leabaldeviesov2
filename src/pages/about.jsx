@@ -3,8 +3,8 @@ import mobilePortrait from "../assets/images/mobile_portrait.jpg";
 
 export default function About() {
   return (
-    <div className="about">
-      <p className="text-xs text-justify font-description text-mainGray mb-8 leading-relaxed tracking-wider">
+    <div className="about h-full w-full md:w-full py-10 px-8 md:pt-2 md:py-0 md:px-16 flex flex-col justify-center items-center text-xs text-justify font-description text-mainGray leading-relaxed tracking-wider md:text-sm lg:text-xl">
+      <p className="mb-8">
         I first discovered HTML and CSS during a college entrepreneurship
         course, and I was amazed by how a few lines of code could bring part of
         my vision to life. Although JavaScript felt out of reach at the time,
@@ -16,11 +16,11 @@ export default function About() {
       <div className="w-full flex justify-center items-center mb-3">
         <hr className="w-10/12 text-hrLine"></hr>
       </div>
-      <img src={mobilePortrait} className=""></img>
+      <img src={mobilePortrait} className="lg:w-9/10"></img>
       <div className="w-full flex justify-center items-center mt-3">
         <hr className="w-10/12 text-hrLine"></hr>
       </div>
-      <p className="text-xs text-justify font-description mt-8 text-mainGray leading-relaxed tracking-wider">
+      <p className="mt-8">
         Before transitioning into tech, I worked as a pastry chef and early
         childhood educator—roles that honed my creativity, attention to detail,
         and ability to follow structured processes. These careers also

@@ -90,25 +90,25 @@ export default function Projects() {
   };
 
   return (
-    <div className="projects font-description">
-      <article>
+    <div className="projects font-description h-full flex flex-col items-center justify-center px-3 md:px-4 lg:px-10 xl:px-20">
+      <article className="project-card w-full h-full flex flex-col items-center justify-center">
         <Carousel
           projects={projects}
           currentProjectIdx={currentProjectIdx}
           onClickPreviousButton={handlePreviousButton}
           onClickNextButton={handleNextButton}
         />
-        <section className="description-container mt-5 text-xs text-mainGray leading-relaxed tracking-wider text-justify">
+        <section className="description-container mt-5 text-xs text-mainGray leading-relaxed tracking-wider text-justify md:text-base">
           <p>{projects[currentProjectIdx].description}</p>
         </section>
 
-        <section className="tech-stack-container mt-6 flex gap-3 justify-center">
+        <section className="tech-stack-container mt-6 flex gap-2 md:gap-5 justify-center w-10/12">
           {projects[currentProjectIdx].techUsed.map((tech) => {
             const Icon = techIcons[tech];
             return Icon ? (
               <Icon
                 key={tech}
-                className="w-8 h-8 text-cobalt-50 hover:text-eggyolk-100
+                className="w-8 h-8 md:w-12 md:h-12 text-cobalt-50 hover:text-eggyolk-100
                 transition-colors"
                 title={tech}
               />
@@ -117,27 +117,27 @@ export default function Projects() {
             );
           })}
         </section>
+        <footer className="flex flex-col items-center justify-center mt-6 w-full ">
+          <button
+            className="w-full mb-3 border-1 border-outlineGray text-mainGray text-xs p-2 rounded-2xl hover:text-cobalt-50
+          hover:border-cobalt-50"
+            onClick={() =>
+              window.open(projects[currentProjectIdx].liveSite, "_blank")
+            }
+          >
+            Live Site
+          </button>
+          <button
+            className="w-full border-1 border-outlineGray text-mainGray text-xs p-2 rounded-2xl hover:text-cobalt-50
+          hover:border-cobalt-50"
+            onClick={() =>
+              window.open(projects[currentProjectIdx].githubLink, "_blank")
+            }
+          >
+            Github
+          </button>
+        </footer>
       </article>
-      <footer className="flex flex-col items-center justify-center mt-6">
-        <button
-          className="w-full mb-3 border-1 border-outlineGray text-mainGray text-xs p-2 rounded-2xl hover:text-cobalt-50
-          hover:border-cobalt-50"
-          onClick={() =>
-            window.open(projects[currentProjectIdx].liveSite, "_blank")
-          }
-        >
-          Live Site
-        </button>
-        <button
-          className="w-full border-1 border-outlineGray text-mainGray text-xs p-2 rounded-2xl hover:text-cobalt-50
-          hover:border-cobalt-50"
-          onClick={() =>
-            window.open(projects[currentProjectIdx].githubLink, "_blank")
-          }
-        >
-          Github
-        </button>
-      </footer>
     </div>
   );
 }

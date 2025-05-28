@@ -119,7 +119,7 @@ export default function SideBar({ tabs }) {
   };
 
   return (
-    <aside className="h-full max-v-[15vw] flex flex-col fixed right-0 top-0 text-mainGray ">
+    <aside className="h-full w-[15%] lg:w-[10%] xl:w-[8%] flex flex-col fixed right-0 top-0 text-mainGray ">
       {tabs.map((tab, idx) => (
         <NavLink
           key={idx}

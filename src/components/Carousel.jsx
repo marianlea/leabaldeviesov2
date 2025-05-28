@@ -7,7 +7,7 @@ export default function Carousel({
   onClickNextButton,
 }) {
   return (
-    <div className="carousel overflow-hidden relative">
+    <div className="carousel overflow-hidden relative w-full">
       <div className="w-full flex items-center justify-center">
         <hr className="w-9/12 mb-3 text-hrLine"></hr>
       </div>
