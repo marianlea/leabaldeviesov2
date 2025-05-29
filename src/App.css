@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid #32cd32;
-}
+} */
 
 @import "tailwindcss";
 
@@ -23,6 +23,13 @@
   format: ("opentype");
 }
 
+@font-face {
+  font-family: "WorkSans";
+  font-display: swap;
+  src: url("/src/assets/fonts/WorkSans-Light.ttf");
+  format: ("truetype");
+}
+
 @theme {
   --color-ceramic-50: #f6f6ed;
   --color-cobalt-100: #004aad;
@@ -34,9 +41,10 @@
   --font-accent: Cubao;
   --font-description: Rotis;
   --font-main: JustSans;
+  --font-hover: WorkSans;
   --text-10xl: 11rem;
   --text-11xl: 12rem;
   --text-12xl: 20rem;
-  --text-13xl: 26rem;
+  --text-13xl: 33rem;
   --tracking-custom: 0.08rem;
 }

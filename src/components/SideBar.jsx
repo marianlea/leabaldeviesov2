@@ -16,7 +16,7 @@ export default function SideBar({ tabs }) {
     // case 1
     // 1 whole div - ceramic 50
     1: (tabName) => (
-      <div className="w-full h-full bg-ceramic-50 flex items-center justify-center rounded-r-2xl tracking-widest">
+      <div className="w-full h-full bg-ceramic-50 flex items-center justify-center rounded-r-2xl xl:rounded-r-4xl tracking-widest">
         <div className="-rotate-90 text-cobalt-50 italic font-bold">
           {tabName}
         </div>
@@ -25,7 +25,7 @@ export default function SideBar({ tabs }) {
     // case 2
     // 1 whole div - cobalt 50
     2: (tabName) => (
-      <div className="w-full h-full bg-cobalt-50 flex items-center justify-center tracking-widest rounded-tl-2xl ">
+      <div className="w-full h-full bg-cobalt-50 flex items-center justify-center tracking-widest rounded-tl-2xl xl:rounded-tl-4xl">
         <div className="-rotate-90">{tabName}</div>
       </div>
     ),
@@ -35,7 +35,7 @@ export default function SideBar({ tabs }) {
     3: (tabName) => (
       <>
         <div className="h-full w-1/12 bg-cobalt-50"></div>
-        <div className="h-full w-11/12 bg-cobalt-100 rounded-tl-2xl flex justify-center items-center tracking-widest">
+        <div className="h-full w-11/12 bg-cobalt-100 rounded-tl-2xl xl:rounded-tl-4xl flex justify-center items-center tracking-widest">
           <div className="-rotate-90">{tabName}</div>
         </div>
       </>
@@ -48,7 +48,7 @@ export default function SideBar({ tabs }) {
       <>
         <div className="h-full w-1/12 bg-cobalt-50"></div>
         <div className="h-full w-1/12 bg-cobalt-100"></div>
-        <div className="h-full w-10/12 bg-eggyolk-100 rounded-tl-2xl flex justify-center items-center tracking-widest">
+        <div className="h-full w-10/12 bg-eggyolk-100 rounded-tl-2xl xl:rounded-tl-4xl flex justify-center items-center tracking-widest">
           <div className="-rotate-90">{tabName}</div>
         </div>
       </>
@@ -119,13 +119,13 @@ export default function SideBar({ tabs }) {
   };
 
   return (
-    <aside className="h-full w-[15%] lg:w-[10%] xl:w-[8%] flex flex-col fixed right-0 top-0 text-mainGray ">
+    <aside className="h-full w-[15%] lg:w-[10%] xl:w-[8%] flex flex-col fixed right-0 top-0 text-ceramic-50 text-sm lg:text-2xl lg:tracking-widest">
       {tabs.map((tab, idx) => (
         <NavLink
           key={idx}
           className={`${
             tab.title
-          }-tab flex-1 flex  justify-center items-center text-ceramic-50 ${
+          }-tab flex-1 flex  justify-center items-center  ${
             bgColourSetter(currentPath)[idx]
           }`}
           to={tab.path}

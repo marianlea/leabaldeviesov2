@@ -1,8 +1,8 @@
 import { ChevronLeft, ChevronRight } from "react-feather";
 
 export default function Carousel({
-  projects,
-  currentProjectIdx,
+  project,
+  currentProjectImgIdx,
   onClickPreviousButton,
   onClickNextButton,
 }) {
@@ -13,10 +13,10 @@ export default function Carousel({
       </div>
       <div
         className="carousel-container flex transition-transform ease-out duration-500"
-        style={{ transform: `translateX(-${currentProjectIdx * 100}%)` }}
+        style={{ transform: `translateX(-${currentProjectImgIdx * 100}%)` }}
       >
-        {projects.map((project, idx) => (
-          <img key={idx} src={project.image} alt={`${project.name} website`} />
+        {project.images.map((image, idx) => (
+          <img key={idx} src={image} alt={`${project.name} website`} />
         ))}
       </div>
       <div className="w-full flex items-center justify-center">
@@ -38,11 +38,11 @@ export default function Carousel({
       </div>
       <div className="indicators-container absolute bottom-5 right-0 left-0">
         <div className="flex items-center justify-center gap-2">
-          {projects.map((project, idx) => (
+          {project.images.map((image, idx) => (
             <div
               key={idx}
               className={`indicator rounded-full transition-all w-2 h-2 bg-ceramic-50 opacity-70 ${
-                currentProjectIdx === idx ? "bg-cobalt-50" : "bg-opacity-50 "
+                currentProjectImgIdx === idx ? "bg-cobalt-50" : "bg-opacity-50 "
               }`}
             ></div>
           ))}

@@ -1,18 +1,10 @@
 import { useState } from "react";
-import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5 } from "react-icons/fa";
-import {
-  SiMui,
-  SiPostgresql,
-  SiStripe,
-  SiJavascript,
-  SiExpress,
-} from "react-icons/si";
-
-import Carousel from "../components/Carousel";
+import { ChevronUp, ChevronDown } from "react-feather";
 import mendls from "../assets/images/mendls.png";
 import pipeline from "../assets/images/pipeline.png";
 import stitches from "../assets/images/stitches.png";
 import tictac from "../assets/images/tic-tac-toe.png";
+import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
@@ -32,7 +24,7 @@ const projects = [
       "css",
       "html",
     ],
-    image: mendls,
+    images: [mendls, pipeline, stitches, tictac],
   },
   {
     name: "pipeline",
@@ -41,7 +33,7 @@ const projects = [
     description:
       "Pipeline was created by a small group of four, pipeline is a single page application using REST JSON API to call petrol stations and their locations utilising Google Maps API, the app also features nearest servos based on user location as well as current time and date.",
     techUsed: ["javascript", "node", "express", "css", "html"],
-    image: pipeline,
+    images: [pipeline, mendls, stitches, tictac],
   },
   {
     name: "stitches",
@@ -50,7 +42,7 @@ const projects = [
     description:
       "Stitches is a multipage CRUD app, where people can sign up, log in and out using BCrypt for password-hashing and built in web forms to collect data from users who can post and reply to posts, follow other users and view their posts in their feed when logged in, session cookies were also implemented for better user experience when navigating through the app as well as security.",
     techUsed: ["postgres", "javascript", "node", "express", "css", "html"],
-    image: stitches,
+    images: [stitches, mendls, pipeline, tictac],
   },
   {
     name: "tic-tac-toe",
@@ -59,85 +51,57 @@ const projects = [
     description:
       "This Ghibli Theme tic-tac-toe game has a responsive interface that allows players to enter their name, choose their avatars that also serves as their token in the board, it keeps track of scores by reducing one heart from the player who lost in the round, the first player who runs out of hearts loses and the other player is declared the winner.",
     techUsed: ["javascript", "node", "express", "css", "html"],
-    image: tictac,
+    images: [tictac, mendls, pipeline, stitches],
   },
 ];
-const techIcons = {
-  react: FaReact,
-  mui: SiMui,
-  stripe: SiStripe,
-  postgres: SiPostgresql,
-  javascript: SiJavascript,
-  node: FaNodeJs,
-  express: SiExpress,
-  css: FaCss3Alt,
-  html: FaHtml5,
-};
 
 export default function Projects() {
   const [currentProjectIdx, setCurrentProjectIdx] = useState(0);
 
-  const handlePreviousButton = () => {
+  const handleUpBtn = () => {
     setCurrentProjectIdx((currentProjectIdx) =>
-      currentProjectIdx === 0 ? projects.length - 1 : currentProjectIdx - 1
+      currentProjectIdx === projects.length - 1 ? 0 : currentProjectIdx - 1
     );
   };
 
-  const handleNextButton = () => {
+  const handleDownBtn = () => {
     setCurrentProjectIdx((currentProjectIdx) =>
       currentProjectIdx === projects.length - 1 ? 0 : currentProjectIdx + 1
     );
   };
 
   return (
-    <div className="projects font-description h-full flex flex-col items-center justify-center px-3 md:px-4 lg:px-10 xl:px-20">
-      <article className="project-card w-full h-full flex flex-col items-center justify-center">
-        <Carousel
-          projects={projects}
-          currentProjectIdx={currentProjectIdx}
-          onClickPreviousButton={handlePreviousButton}
-          onClickNextButton={handleNextButton}
-        />
-        <section className="description-container mt-5 text-xs text-mainGray leading-relaxed tracking-wider text-justify md:text-base">
-          <p>{projects[currentProjectIdx].description}</p>
-        </section>
-
-        <section className="tech-stack-container mt-6 flex gap-2 md:gap-5 justify-center w-10/12">
-          {projects[currentProjectIdx].techUsed.map((tech) => {
-            const Icon = techIcons[tech];
-            return Icon ? (
-              <Icon
-                key={tech}
-                className="w-8 h-8 md:w-12 md:h-12 text-cobalt-50 hover:text-eggyolk-100
-                transition-colors"
-                title={tech}
-              />
-            ) : (
-              <span key={tech}>{tech}</span>
-            );
-          })}
-        </section>
-        <footer className="flex flex-col items-center justify-center mt-6 w-full ">
-          <button
-            className="w-full mb-3 border-1 border-outlineGray text-mainGray text-xs p-2 rounded-2xl hover:text-cobalt-50
-          hover:border-cobalt-50"
-            onClick={() =>
-              window.open(projects[currentProjectIdx].liveSite, "_blank")
-            }
-          >
-            Live Site
-          </button>
-          <button
-            className="w-full border-1 border-outlineGray text-mainGray text-xs p-2 rounded-2xl hover:text-cobalt-50
-          hover:border-cobalt-50"
-            onClick={() =>
-              window.open(projects[currentProjectIdx].githubLink, "_blank")
-            }
-          >
-            Github
-          </button>
-        </footer>
-      </article>
+    <div className="projects font-description h-full w-full flex flex-col items-center justify-center px-3 md:px-4 lg:px-10 xl:px-20">
+      <div
+        className="w-full flex flex-col items-center justify-center transition-transform ease-out duration-500"
+        style={{ transform: `translateY(-${currentProjectIdx * 100}vh)` }}
+      >
+        {projects.map((project, idx) => (
+          <ProjectCard key={idx} project={project} />
+        ))}
+      </div>
+      <div className="left-2 bottom-2 fixed flex flex-col border-mainGray border rounded-2xl opacity-50">
+        <button
+          disabled={currentProjectIdx === 0}
+          className={`${
+            currentProjectIdx === 0 ? "opacity-10" : "opacity-100"
+          }`}
+          onClick={handleUpBtn}
+        >
+          <ChevronUp size={30} />
+        </button>
+        <button
+          className={`${
+            currentProjectIdx === projects.length - 1
+              ? "opacity-10"
+              : "opacity-100"
+          }`}
+          disabled={currentProjectIdx === projects.length - 1}
+          onClick={handleDownBtn}
+        >
+          <ChevronDown size={30} className="" />
+        </button>
+      </div>
     </div>
   );
 }
