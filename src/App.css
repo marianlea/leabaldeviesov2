@@ -48,3 +48,12 @@
   --text-13xl: 33rem;
   --tracking-custom: 0.08rem;
 }
+
+.input-disabled:disabled,
+.textarea-disabled:disabled,
+.button-disabled:disabled {
+  background-color: var(--color-outlineGray);
+  color: var(--color-mainGray);
+  cursor: not-allowed;
+  opacity: 0.2;
+}

@@ -80,12 +80,12 @@ export default function Projects() {
           <ProjectCard key={idx} project={project} />
         ))}
       </div>
-      <div className="left-2 bottom-2 fixed flex flex-col border-mainGray border rounded-2xl opacity-50">
+      <div className="left-2 lg:left-4 2xl:left-80 bottom-2 lg:bottom-4 fixed flex flex-col 2xl:justify-center 2xl:h-screen">
         <button
           disabled={currentProjectIdx === 0}
           className={`${
-            currentProjectIdx === 0 ? "opacity-10" : "opacity-100"
-          }`}
+            currentProjectIdx === 0 ? "opacity-10" : "opacity-30"
+          } rounded-full bg-outlineGray p-1 mb-2 lg:p-4`}
           onClick={handleUpBtn}
         >
           <ChevronUp size={30} />
@@ -94,8 +94,8 @@ export default function Projects() {
           className={`${
             currentProjectIdx === projects.length - 1
               ? "opacity-10"
-              : "opacity-100"
-          }`}
+              : "opacity-30"
+          } rounded-full bg-outlineGray p-1 lg:p-4`}
           disabled={currentProjectIdx === projects.length - 1}
           onClick={handleDownBtn}
         >
