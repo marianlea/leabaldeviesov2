@@ -16,8 +16,8 @@ export default function SideBar({ tabs }) {
     // case 1
     // 1 whole div - ceramic 50
     1: (tabName) => (
-      <div className="w-full h-full bg-ceramic-50 flex items-center justify-center rounded-r-2xl xl:rounded-r-4xl tracking-widest">
-        <div className="-rotate-90 text-cobalt-50 italic font-bold">
+      <div className="w-full h-full bg-ceramic-50 flex items-center justify-center rounded-r-2xl xl:rounded-r-2xl tracking-widest">
+        <div className="-rotate-90 text-cobalt-50 italic font-bold dark:text-mainGray">
           {tabName}
         </div>
       </div>
@@ -119,7 +119,7 @@ export default function SideBar({ tabs }) {
   };
 
   return (
-    <aside className="h-full w-[15%] lg:w-[10%] xl:w-[8%] flex flex-col fixed right-0 top-0 text-ceramic-50 text-sm lg:text-2xl lg:tracking-widest">
+    <aside className="h-full w-[15%] lg:w-[10%] xl:w-[8%] flex flex-col fixed right-0 top-0 text-ceramic-50 dark:text-links text-sm lg:text-2xl lg:tracking-widest">
       {tabs.map((tab, idx) => (
         <NavLink
           key={idx}

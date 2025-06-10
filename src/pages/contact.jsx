@@ -118,7 +118,7 @@ export default function Contact() {
               required
             ></textarea>
             <button
-              className="submit-button button-disabled bg-cobalt-50 text-ceramic-50 rounded-2xl w-full mb-2 p-1 hover:bg-eggyolk-100"
+              className="submit-button button-disabled bg-cobalt-50 text-ceramic-50 rounded-2xl w-full mb-2 p-1 hover:bg-eggyolk-100 dark:bg-eggyolk-100 dark:text-mainGray dark:hover:bg-mainGray dark:hover:text-cobalt-50"
               type="submit"
               disabled={loading}
             >

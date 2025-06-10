@@ -21,14 +21,14 @@ const techIcons = {
   html: FaHtml5,
 };
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, totalProj }) {
   const [currentProjectImgIdx, setCurrentProjectImgIdx] = useState(0);
   const [hoveredTech, setHoveredTech] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentProjectImgIdx((idx) => idx === project.images.length - 1);
-    }, 3000);
+      setCurrentProjectImgIdx((idx) => (idx + 1) % project.images.length);
+    }, 1700);
 
     return () => clearInterval(interval);
   }, [project.images.length]);
@@ -55,6 +55,7 @@ export default function ProjectCard({ project }) {
         currentProjectImgIdx={currentProjectImgIdx}
         onClickPreviousButton={handlePreviousButton}
         onClickNextButton={handleNextButton}
+        totalProj={totalProj}
       />
       <section className="description-container mt-5 text-xs text-mainGray leading-relaxed tracking-wider text-justify md:text-base lg:text-lg 2xl:text-xl">
         <p>{project.description}</p>
@@ -78,7 +79,7 @@ export default function ProjectCard({ project }) {
               />
               {hoveredTech === tech && (
                 <div className="flex flex-col justify-center items-center">
-                  <span className="absolute text-xs mt-8 bg-cobalt-50 py-1 px-3 rounded-2xl text-ceramic-50">
+                  <span className="absolute text-xs mt-8 bg-cobalt-50 py-1 px-3 rounded-2xl text-ceramic-50 dark:bg-eggyolk-100">
                     {tech}
                   </span>
                 </div>
@@ -91,9 +92,10 @@ export default function ProjectCard({ project }) {
       </section>
       <footer className="flex flex-col items-center justify-center mt-12 w-full text-xs md:text-base lg:text-lg 2xl:text-xl">
         <button
-          className="w-full mb-3 border-1 border-outlineGray text-mainGray  p-2 rounded-2xl hover:text-cobalt-50
-  hover:border-cobalt-50"
+          className={`w-full mb-3 border-1 border-outlineGray text-mainGray  p-2 rounded-2xl hover:text-cobalt-50
+  hover:border-cobalt-50 ${!project.liveSite ? "liveSiteBtn-disabled" : ""} `}
           onClick={() => window.open(project.liveSite, "_blank")}
+          disabled={!project.liveSite}
         >
           Live Site
         </button>

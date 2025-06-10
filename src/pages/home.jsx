@@ -8,7 +8,7 @@ export default function Home() {
           <p
             className="font-accent text-10xl text-cobalt-100 text-justify md:text-12xl
           lg:text-12xl
-          2xl:text-13xl"
+          2xl:text-13xl dark:text-mainGray"
           >
             Lea
           </p>

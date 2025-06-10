@@ -1,0 +1,80 @@
+/* * {
+  border: 1px solid #32cd32;
+} */
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Cubao";
+  font-display: swap;
+  src: url("/src/assets/fonts/Cubao.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Rotis";
+  font-display: swap;
+  src: url("/src/assets/fonts/Rotis.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JustSans";
+  font-display: swap;
+  src: url("/src/assets/fonts/JustSans.otf");
+  format: ("opentype");
+}
+
+@font-face {
+  font-family: "WorkSans";
+  font-display: swap;
+  src: url("/src/assets/fonts/WorkSans-Light.ttf");
+  format: ("truetype");
+}
+
+@theme {
+  --color-ceramic-50: #f6f6ed;
+  --color-cobalt-100: #004aad;
+  --color-cobalt-50: #006ed4;
+  --color-eggyolk-100: #ffc736;
+  --color-mainGray: #393939;
+  --color-outlineGray: #828282;
+  --color-hrLine: #d9d9d9;
+  --color-links: #afafaf;
+  --font-accent: Cubao;
+  --font-description: Rotis;
+  --font-main: JustSans;
+  --font-hover: WorkSans;
+  --text-10xl: 11rem;
+  --text-11xl: 12rem;
+  --text-12xl: 20rem;
+  --text-13xl: 33rem;
+  --tracking-custom: 0.08rem;
+}
+
+.input-disabled:disabled,
+.textarea-disabled:disabled,
+.button-disabled:disabled {
+  background-color: var(--color-outlineGray);
+  color: var(--color-mainGray);
+  cursor: not-allowed;
+  opacity: 0.2;
+}
+
+.liveSiteBtn-disabled:disabled {
+  background: var(--color-hrLine);
+  opacity: 0.6;
+  color: var(--color-ceramic-50);
+  border: var(--color-hrLine);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+  --color-ceramic-50: #273950;
+  --color-cobalt-100: #23406b;
+  --color-cobalt-50: #142444;
+  --color-eggyolk-100: #6d482a;
+  --color-mainGray: #fdfdfd;
+  --color-outlineGray: #f6f6ed;
+  --color-hrLine: #f6f6ed;
+  --color-links: #afafaf;
+}

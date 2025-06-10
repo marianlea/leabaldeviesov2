@@ -5,11 +5,12 @@ export default function Carousel({
   currentProjectImgIdx,
   onClickPreviousButton,
   onClickNextButton,
+  totalProj,
 }) {
   return (
     <div className="carousel overflow-hidden relative w-full">
       <div className="w-full flex items-center justify-center">
-        <hr className="w-9/12 mb-3 text-hrLine"></hr>
+        <p className="mb-6 border-hrLine border rounded-2xl w-3/4 py-1 text-mainGray tracking-widest flex items-center justify-center">{`Project ${project.ref} of ${totalProj}`}</p>
       </div>
       <div
         className="carousel-container flex transition-transform ease-out duration-500"
