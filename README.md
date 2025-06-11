@@ -121,7 +121,7 @@ Dark mode was a bit of a challenge as I had to navigate through the new Tailwind
 # **☎️ Contact & Links**
 
 - 📧 mlbaldevieso@gmail.com
-- 🌐
+- 🌐 leabaldeviesov2.vercel.app
 - 🔗 linkedin.com/marianlea
 - 💻 github.com/marianlea
 
