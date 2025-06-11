@@ -22,10 +22,14 @@ export default function Home() {
           2xl:text-2xl
           xl:absolute xl:w-4/12 2xl:w-3/12 xl:right-30 xl:top-50 2xl:right-80 2xl:top-100 2xl:items-end"
           >
-            — a junior software engineer with a background in childcare and a
-            love for building interactive, human-centered web experiences. After
-            completing a 3-month coding bootcamp, I’m now transitioning fully
-            into tech and excited to grow as a developer.
+            — a software engineer driven by the belief that technology should
+            make a meaningful difference in people’s lives. Coming from careers
+            in both hospitality and early childhood education, I bring a unique
+            perspective on empathy, problem-solving, and real-world impact. As a
+            career changer, I’m committed to building purposeful, high-quality
+            projects that not only grow my skills but also allow me to
+            contribute to work that improves dignity, comfort, and opportunity
+            for others
           </p>
         </section>
       </div>
