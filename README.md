@@ -113,7 +113,7 @@ Dark mode was a bit of a challenge as I had to navigate through the new Tailwind
 # ✨ Lessons I Learned
 
 - 🖼️  I am a visual thinker so drawing and/or wireframing helps me a lot to draw out detailed and tactile strategy, solutions, and algorithm.
-- 🔨  I believe in “break things, learn fast” but asking for help when you are stuck with a problem for more than 30-40 minutes will help me learn faster.
+- 🔨  I believe in “break things, learn fast” but asking for help when I am stuck with a problem for more than 30-40 minutes will help me learn faster.
 - 🖇️  How to use libraries such as EmailJS, FeatherIcons
 - ⚙️  How to add dark mode using TailwindCSS v4, adding custom font, using theme to define colours
 - 🎒  Refreshed my knowledge in react-router-dom, how to access localStorage

@@ -129,6 +129,7 @@ export default function SideBar({ tabs }) {
             bgColourSetter(currentPath)[idx]
           }`}
           to={tab.path}
+          aria-label={tab.title}
         >
           {caseSetter(currentPath)[idx]}
         </NavLink>
