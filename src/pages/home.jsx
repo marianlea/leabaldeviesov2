@@ -33,17 +33,13 @@ export default function Home() {
       </div>
       <section className="mt-12 font-main text-xl italic text-outlineGray md:text-4xl lg:text-6xl">
         <p>
-          <NavLink
-            to="/projects"
-            className="hover:font-hover"
-            //  onClick={() => onClickTab("projects-tab")}
-          >
+          <NavLink to="/projects" className="hover:font-hover">
             view my projects
           </NavLink>
         </p>
         <p>
           <a
-            href="/Lea_Baldevieso.pdf"
+            href="/Lea_Baldevieso_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:font-hover"
